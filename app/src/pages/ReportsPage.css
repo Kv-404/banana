@@ -1,0 +1,427 @@
+/* ============================================
+   Reports Page Styles
+   ============================================ */
+
+/* Tabs */
+.report-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: 18px;
+}
+
+.report-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.report-tab.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Date Header */
+.report-date-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.report-date-icon {
+  color: var(--accent-primary);
+}
+
+.report-date {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.report-date-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* Human State Index Card */
+.hsi-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(236, 72, 153, 0.04));
+  border-color: rgba(168, 85, 247, 0.15);
+  margin-bottom: 16px;
+}
+
+.hsi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hsi-value {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.hsi-number {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.hsi-max {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hsi-ring {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hsi-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hsi-progress {
+  transition: stroke-dasharray 1s ease;
+}
+
+.hsi-icon {
+  position: absolute;
+  color: var(--accent-primary);
+}
+
+.hsi-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.hsi-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 14px 12px;
+}
+
+.metric-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.metric-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.metric-trend.up {
+  color: var(--mood-happy);
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.metric-trend.down {
+  color: var(--mood-stressed);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+/* Hourly Chart */
+.hourly-chart {
+  display: flex;
+  gap: 4px;
+  height: 120px;
+  margin-top: 14px;
+  align-items: flex-end;
+}
+
+.hourly-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.hourly-bars {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+}
+
+.hourly-bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  min-height: 3px;
+  transition: height 0.5s ease;
+}
+
+.hourly-bar.stress {
+  background: var(--mood-stressed);
+  opacity: 0.7;
+}
+
+.hourly-bar.energy {
+  background: var(--accent-teal);
+  opacity: 0.7;
+}
+
+.hourly-label {
+  font-size: 8px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.legend-dot.stress { background: var(--mood-stressed); }
+.legend-dot.energy { background: var(--accent-teal); }
+
+/* Report Actions */
+.report-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-bottom: 12px;
+}
+
+.report-actions .btn {
+  flex: 1;
+}
+
+/* Weekly Compare */
+.week-compare-card {
+  margin-bottom: 16px;
+}
+
+.week-compare {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.compare-col {
+  flex: 1;
+  text-align: center;
+}
+
+.compare-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.compare-value {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+.compare-value.good {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.compare-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.compare-divider {
+  color: var(--text-muted);
+}
+
+.compare-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+}
+
+.compare-change.positive {
+  color: var(--mood-happy);
+  background: rgba(52, 211, 153, 0.1);
+}
+
+/* Weekly Insights */
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.insight-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.insight-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: var(--accent-primary-soft);
+  color: var(--accent-glow);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.insight-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Weekly Trend */
+.weekly-trend {
+  display: flex;
+  gap: 8px;
+  height: 130px;
+  margin-top: 14px;
+  align-items: flex-end;
+}
+
+.trend-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.trend-bar-track {
+  flex: 1;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.trend-bar-fill {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-height: 4px;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+}
+
+.trend-day {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}

@@ -1,0 +1,19 @@
+.app-container {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-bg-glow {
+  position: fixed;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.08) 0%, rgba(124, 58, 237, 0.03) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}

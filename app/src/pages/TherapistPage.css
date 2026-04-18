@@ -1,0 +1,246 @@
+/* ============================================
+   TherapistPage Styles
+   ============================================ */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar:focus-within {
+  border-color: var(--border-active);
+}
+
+.search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Filter Pills */
+.filter-pills {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 18px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filter-pills::-webkit-scrollbar { display: none; }
+
+.filter-pill {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-pill.active {
+  background: var(--accent-primary-soft);
+  border-color: var(--accent-primary);
+  color: var(--accent-glow);
+}
+
+.filter-pill:active {
+  transform: scale(0.95);
+}
+
+/* Therapist Card */
+.therapist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.therapist-card {
+  padding: 16px;
+}
+
+.doc-main {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.doc-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.doc-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 1px solid var(--border-subtle);
+}
+
+.doc-online {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--mood-happy);
+  border: 2px solid var(--bg-card);
+}
+
+.doc-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.doc-specialty {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.doc-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.doc-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--accent-amber);
+  font-weight: 600;
+}
+
+.doc-reviews {
+  color: var(--text-muted);
+}
+
+.doc-exp {
+  color: var(--text-muted);
+}
+
+.doc-exp::before {
+  content: '·';
+  margin-right: 6px;
+}
+
+/* Details Row */
+.doc-details {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.doc-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.doc-charge {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.charge-amount {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.charge-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.doc-modes {
+  display: flex;
+  gap: 6px;
+}
+
+.mode-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--accent-blue-soft);
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-slot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--mood-happy);
+  margin-bottom: 8px;
+}
+
+.doc-languages {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.lang-tag {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.doc-book-btn {
+  width: 100%;
+  margin-top: 4px;
+}

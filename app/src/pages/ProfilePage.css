@@ -1,0 +1,322 @@
+/* ============================================
+   Profile Page Styles
+   ============================================ */
+
+/* Profile Header */
+.profile-header {
+  text-align: center;
+  padding: 20px 0 24px;
+}
+
+.profile-avatar-section {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-glow-lg);
+}
+
+.profile-avatar-text {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.profile-avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(168, 85, 247, 0.25);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.profile-edit-btn {
+  position: absolute;
+  bottom: 0;
+  right: -4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.profile-edit-btn:active {
+  transform: scale(0.9);
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.profile-badges {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Device Card */
+.device-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.06), rgba(99, 102, 241, 0.04));
+  border-color: rgba(168, 85, 247, 0.12);
+}
+
+.device-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.device-info-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.device-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--accent-primary-soft);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-status-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.status-icon.connected { color: var(--mood-happy); }
+.status-icon.disconnected { color: var(--mood-stressed); }
+
+.device-status-badge {
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.device-status-badge.online {
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--mood-happy);
+}
+
+.device-status-badge.offline {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--mood-stressed);
+}
+
+/* Device Metrics */
+.device-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.device-metric {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dm-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dm-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.dm-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.dm-value {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dm-bar-track {
+  width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.dm-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.dm-status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.dm-status.normal {
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--mood-happy);
+}
+
+.dm-status.uptodate {
+  background: rgba(96, 165, 250, 0.1);
+  color: var(--mood-calm);
+}
+
+.dm-signal-bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+}
+
+.signal-bar {
+  width: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.signal-bar:nth-child(1) { height: 6px; }
+.signal-bar:nth-child(2) { height: 10px; }
+.signal-bar:nth-child(3) { height: 14px; }
+.signal-bar:nth-child(4) { height: 18px; }
+.signal-bar:nth-child(5) { height: 22px; }
+
+.signal-bar.active { background: var(--mood-happy); }
+
+/* Settings */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease;
+  font-family: var(--font-body);
+}
+
+.settings-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-item:active {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.settings-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.settings-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+  text-align: left;
+}
+
+.settings-chevron {
+  color: var(--text-muted);
+}
+
+/* Logout */
+.logout-btn {
+  width: 100%;
+  color: var(--mood-stressed);
+  border-color: rgba(248, 113, 113, 0.15);
+}
+
+.app-version {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  padding-bottom: 8px;
+}
