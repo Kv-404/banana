@@ -30,7 +30,7 @@ banana/
 ├── app/                            # React web application (Vite + React 19)
 │   └── src/
 │       ├── pages/
-│       │   ├── AIPage.jsx          # Voice AI therapist — OpenAI Realtime API
+│       │   ├── AIPage.jsx          # Voice AI companion
 │       │   ├── HomePage.jsx        # Mood dashboard and heatmap
 │       │   ├── ReportsPage.jsx     # Daily and weekly emotional reports
 │       │   ├── SOSPage.jsx         # Emergency contacts and helplines
